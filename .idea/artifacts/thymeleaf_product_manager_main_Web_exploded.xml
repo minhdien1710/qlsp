@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="thymeleaf-product-manager_main:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/thymeleaf_product_manager_main_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="thymeleaf-product-manager_main/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="thymeleaf-product-manager_main" />
+        </element>
+        <element id="directory" name="lib" />
+      </element>
+      <element id="artifact" artifact-name="Gradle : com.codegym : thymeleaf-product-manager-1.0-SNAPSHOT.war" />
+      <element id="artifact" artifact-name="Gradle : com.codegym : thymeleaf-product-manager-1.0-SNAPSHOT.war (exploded)" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 class="title">Product list</h1>
+<h3 th:text="${5<8}"></h3>
+<!--<th:block th:switch="${gender}">-->
+<!--    <div th:case="'F'">-->
+<!--        FEMALE-->
+<!--    </div>-->
+<!--    <div th:case="'M'">-->
+<!--        MALE-->
+<!--    </div>-->
+<!--</th:block>-->
+<!--<span th:if="${gender == 'F'}">Female</span>-->
+<!--<span th:unless="${gender == 'M'}">Male</span>-->
+<div>
+    <div th:each="product,iterStat:${products}" th:class="${iterStat.odd}? 'odd'">
+        <div class="product-item">
+            Product No.<p th:text="${iterStat.index}"></p>
+            <p th:text="${product.id}"></p>
+            <p th:text="${product.name}"></p>
+            <p th:text="${product.price}"></p>
+            <img th:src="@{'/i/'+${product.image}}">
+            <p><a th:href="@{/edit-product/__${product.id}__}">Edit</a></p>
+            <p><a th:href="@{/delete-product/__${product.id}__}">Delete</a></p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
